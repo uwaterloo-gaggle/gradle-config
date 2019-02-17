@@ -79,7 +79,7 @@ dependencies {
 }
 
 task fatJar(type: Jar) {
-    useZip64 = true
+    zip64 = true
     baseName = 'fatJar'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
