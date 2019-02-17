@@ -6,6 +6,14 @@ plugins {
     id 'application' apply false
 }
 
+if (project.name == "{YOUR PROJECT NAME}") {
+   throw new IllegalStateException("Project name not configured!");
+}
+
+task wrapper(type: Wrapper, overwrite: true) {
+    gradleVersion = '5.2.1'
+}
+
 subprojects {
     ext.CONFIGS = "https://raw.githubusercontent.com/uwaterloo-gaggle/gradle-config/master/"
 
