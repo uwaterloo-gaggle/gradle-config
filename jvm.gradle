@@ -2,7 +2,6 @@ apply plugin: 'java'
 apply plugin: 'scala'
 apply plugin: 'org.jetbrains.kotlin.jvm'
 apply plugin: 'org.jetbrains.kotlin.kapt'
-apply plugin: 'application'
 
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
