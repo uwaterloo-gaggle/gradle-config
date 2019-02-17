@@ -44,7 +44,8 @@ dependencies {
     compile group: 'org.apache.spark', name: "spark-graphx_$scala_major_version", version: spark_version
     compile group: 'org.apache.spark', name: "spark-tags_$scala_major_version", version: spark_version
     compile group: 'org.apache.spark', name: "spark-yarn_$scala_major_version", version: spark_version
-    compile group: 'org.apache.spark', name: "spark-streaming-flume-assembly_$scala_major_version", version: spark_version
+    // No Scala 2.12 version available
+    // compile group: 'org.apache.spark', name: "spark-streaming-flume-assembly_$scala_major_version", version: spark_version
     compile group: 'org.apache.spark', name: "spark-launcher_$scala_major_version", version: spark_version
 
     // Config
