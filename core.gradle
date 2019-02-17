@@ -1,5 +1,5 @@
 if (project.name == "{YOUR PROJECT NAME}") {
-   throw new IllegalStateException("Project name not configured!");
+   throw new IllegalStateException("Project name not configured, please configure it in 'settings.gradle'!");
 }
 
 task wrapper(type: Wrapper, overwrite: true) {
