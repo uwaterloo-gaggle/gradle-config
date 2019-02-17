@@ -1,11 +1,3 @@
-plugins {
-    id 'java' apply false
-    id 'scala' apply false
-    id 'org.jetbrains.kotlin.jvm'  version '1.3.21' apply false
-    id 'org.jetbrains.kotlin.kapt' version '1.3.21' apply false
-    id 'application' apply false
-}
-
 if (project.name == "{YOUR PROJECT NAME}") {
    throw new IllegalStateException("Project name not configured!");
 }

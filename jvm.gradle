@@ -17,7 +17,7 @@ compileTestKotlin {
 dependencies {
     def scala_major_version = '2.12'
     def scala_minor_version = '8'
-    def scala_version = scala_major_version + '.' + $scala_minor_version
+    def scala_version = scala_major_version + '.' + scala_minor_version
 
     // Logging
     compile 'io.github.microutils:kotlin-logging:1.6.24'
