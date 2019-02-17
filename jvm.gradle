@@ -1,9 +1,11 @@
-
 apply plugin: 'java'
 apply plugin: 'scala'
 apply plugin: 'org.jetbrains.kotlin.jvm'
 apply plugin: 'org.jetbrains.kotlin.kapt'
 apply plugin: 'application'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
 
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
@@ -16,6 +18,11 @@ dependencies {
     def scala_major_version = '2.12'
     def scala_minor_version = '8'
     def scala_version = scala_major_version + '.' + $scala_minor_version
+
+    // Logging
+    compile 'io.github.microutils:kotlin-logging:1.6.24'
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+    compile group: 'com.typesafe.scala-logging', name: "scala-logging_$scala_major_version", version: '3.9.2'
 
     // Neo4j
     compile group: 'org.neo4j.procedure', name: 'apoc', version: '3.5.0.2'
@@ -53,6 +60,9 @@ dependencies {
 
     // Guava
     compile group: 'com.google.guava', name: 'guava', version: '27.0.1-jre'
+
+    // Coroutines
+    compile 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1'
 
     // Kotlin stdlib
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
