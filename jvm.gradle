@@ -77,3 +77,9 @@ dependencies {
     testImplementation "org.scalatest:scalatest_$scala_major_version:3.0.5"
     testImplementation 'junit:junit:4.12'
 }
+
+task fatJar(type: Jar) {
+    baseName = 'fatJar'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
